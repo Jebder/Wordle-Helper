@@ -18,6 +18,7 @@ body {
     text-align: center;
     font-size: 56px;
     border-bottom: solid black 2px;
+    padding: 10px;
 
 }
 
@@ -25,15 +26,15 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 400px;
-    height: 400px;
+    width: 20%;
     gap: 5px;
   }
   
   .boxSet {
     display: flex;
     flex-direction: row;
-    margin: 0 10px;
+    margin: 0;
+    justify-content: space-between;
   }
   
   .box {
@@ -43,6 +44,12 @@ body {
     text-align: center;
     font-size: 2em;
     margin: 0 2.5px;
+  }
+
+  .enterButton{
+    margin-top: 5px;
+    font-size: 20px;
+    border-color: black;
   }
 
   footer {
