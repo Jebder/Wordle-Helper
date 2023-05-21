@@ -22,6 +22,30 @@ body {
 
 }
 
+.Main {
+    display: flex;
+  }
+
+.wordListBox{
+    max-height: 450px;
+    overflow: auto; /* Enable scrolling */
+    border: solid black 2px;
+    height: 100%;
+}
+
+
+ol{
+    padding-left: 30px;
+    padding-right: 20px;
+    margin: 0;
+    gap: 2px;
+}
+
+li{
+    margin-bottom: 5px;
+    font-size: 97.5%;
+}
+
 .allBoxSets {
     display: flex;
     flex-direction: column;
