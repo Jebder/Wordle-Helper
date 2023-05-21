@@ -8,5 +8,6 @@
 
 5. Needs to change colors and what not for correct, correct but wrong spot, and wrong.
 
-
+6. *Add a header above the word list to specificy what it is. At first, it will be a starting word list (eventually ranked by best startign word)
+and then it will just be a word list. Could look tacky and make everything unaligned.* Could be dogshit. Needs further analysis.  
 
