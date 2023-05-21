@@ -24,6 +24,9 @@ body {
 
 .Main {
     display: flex;
+    justify-content: center;
+    margin-left: -300px;
+    gap: 175px;
   }
 
 .wordListBox{
@@ -49,8 +52,6 @@ li{
 .allBoxSets {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 20%;
     gap: 5px;
   }
   
