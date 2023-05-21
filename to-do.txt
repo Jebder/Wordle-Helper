@@ -1,0 +1,12 @@
+1. Possibly need to make list with more columns because word list can be too big to scroll though. Fit more words on screen.
+
+2. Keyboard on the bottom with all the pretty stuff ie..hover/click colors.
+
+3. Make pretty? I think it looks simple and nice already but we could put some flare on it. 
+
+4. Logic for winning game.
+
+5. Needs to change colors and what not for correct, correct but wrong spot, and wrong.
+
+
+
