@@ -1,0 +1,57 @@
+/* Regular weight */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+/* Bold weight */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+/* Italic style */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.Header {
+    text-align: center;
+    font-size: 56px;
+    border-bottom: solid black 2px;
+
+}
+
+.allBoxSets {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    gap: 5px;
+  }
+  
+  .boxSet {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+  }
+  
+  .box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2em;
+    margin: 0 2.5px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    text-align: center;
+    margin-top: 0;
+  }
+  
