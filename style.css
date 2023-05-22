@@ -17,7 +17,8 @@ body {
 .Header {
     text-align: center;
     font-size: 56px;
-    border-bottom: solid black 2px;
+    border-bottom: solid blue 2px;
+    color: red;
     padding: 10px;
 
 }
@@ -32,8 +33,8 @@ body {
 .wordListBox{
     max-height: 450px;
     overflow: auto; /* Enable scrolling */
-    border: cornsilk black 2px;
-    height: 100%;
+    border: fuchsia black 2px;
+    height: 500%;
 }
 
 
