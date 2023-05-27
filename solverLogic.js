@@ -1,0 +1,1 @@
+import wordArray from '/home/jeb/repos/Wordle-Solver/words.js';

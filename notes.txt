@@ -1,3 +1,5 @@
 Notes will go here. Can use for communication or whatever. 
 
 Say what you did in the code that should be noted.
+
+Comment system may suffice.
