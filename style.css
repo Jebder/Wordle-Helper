@@ -20,6 +20,7 @@ body {
     font-size: 56px;
     border-bottom: solid black 2px;
     padding: 10px;
+    background-color: antiquewhite;
     
 
 }
@@ -111,7 +112,7 @@ li{
   
 
   .keyboardContainer{
-    background-color: tomato;
+    background-color:antiquewhite
     
    
    
