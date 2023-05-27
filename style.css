@@ -34,8 +34,10 @@ body {
 
 .wordListBox{
     display: flex;
-    justify-content: center;
-    width: 100px;
+  
+    justify-content:left;
+    margin-right: 300px;
+    width: 300px;
     max-height: 450px;
     overflow: auto; /* Enable scrolling */
     height: 500%;
@@ -46,28 +48,44 @@ body {
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center center;
-    background-blend-mode:multiply
+    background-blend-mode:multiply;
+    background-image: opacity;
+    
   
   
 }
 
 
 ol{
-    padding-left: 30px;
+    
+    padding-left: 1px;
     padding-right: 20px;
-    margin: 0;
+    margin: auto;
     gap: 3px; 
+    columns: 2;
+    column-gap: 100px;
+    
+
+    
 }
 
 li{
     margin-bottom: 5px;
     font-size: 97.5%;
+    
+    
 }
 
 .allBoxSets {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
+    padding-right: 50p;
+    place-items: center;
+  
+    
+     
   }
   
   .boxSet {
@@ -75,6 +93,9 @@ li{
     flex-direction: row;
     margin: 0;
     justify-content: space-between;
+    place-items: center;
+    
+    
   }
   
   .box {
@@ -84,6 +105,34 @@ li{
     text-align: center;
     font-size: 2em;
     margin: 0 2.5px;
+    
+  }
+
+  
+
+  .keyboardContainer{
+    background-color: tomato;
+    
+   
+   
+    
+  }
+
+  .rowOne {
+    margin: auto;
+    text-align: center;
+    
+    
+  }
+
+  .rowTwo {
+
+    text-align: center;
+    margin: auto;
+  }
+
+  .rowThree {
+    text-align: center;
   }
 
   .enterButton{
