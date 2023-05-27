@@ -7,7 +7,7 @@ let wordDict = {
     lastWord: null
 };
 
-let letters = [null, null, null, null, null]; 
+let letters = []; 
 
 
 function combineLetters(letters) {
@@ -20,22 +20,24 @@ function combineLetters(letters) {
 
 function populateWord(input) {
     if (input === 'BACKSPACE'){
-        // DO BACKSPACE STUFF
+        letters.pop();
+        console.log(letters)
     } else if (input === 'ENTER'){
-        for (let word in wordDict) {
-            if (wordDict[word] === null){
-                wordDict[word] = combineLetters(letters);
-                letters = [null, null, null, null, null]; // reset letters variable
-                break;
+        if (letters.length < 5){
+            console.log('Word must be 5 letters.');
+        } else {
+            for (let word in wordDict) {
+                if (wordDict[word] === null){
+                    wordDict[word] = combineLetters(letters);
+                    letters = []; // reset letters variable
+                    break;
+                };
             };
         };
-    } else{
-        for (let i = 0;i < 5; i++){
-            if (letters[i] === null) {
-                letters[i] = input;
-                console.log(letters);
-                break;
-            };
+    } else { 
+        if (letters.length < 5) {
+            letters.push(input);
+            console.log(letters);
         };
     };
 };
