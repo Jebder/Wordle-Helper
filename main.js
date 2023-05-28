@@ -9,6 +9,44 @@ let wordObj = {
 
 let letters = []; 
 
+let colorArray = [];
+
+function changeColor(input) {
+    let computedStyle = window.getComputedStyle(input);
+    let color = computedStyle.backgroundColor;
+    console.log(color + 'color');
+  
+    switch (color) {
+      case 'rgb(255, 255, 255)': // white color in RGB format
+        input.style.backgroundColor = 'yellow';
+        console.log('yellow');
+        break;
+      case 'rgb(255, 255, 0)': // yellow color in RGB format
+        input.style.backgroundColor = 'green';
+        console.log('green');
+        break;
+      case 'rgb(0, 128, 0)': // green color in RGB format
+        input.style.backgroundColor = 'white';
+        console.log('white');
+        break;
+    }
+  }
+
+
+function setColors(){
+    let cells = document.querySelectorAll('.box');
+    cells.forEach((cell)=> {
+        cell.addEventListener('click', ()=> {
+            changeColor(cell);
+        })
+    })
+};
+
+
+function enterColors(){
+
+};
+
 
 function removeLetter(letter){
     let currentWordObj = '';
@@ -26,10 +64,6 @@ function removeLetter(letter){
     const row = letters.length + 1; 
     const column = keys.indexOf(currentWordObj) + 1; // because 0 index 
 
-    console.log(row)
-    console.log(column)
-
-    console.log(`#set${column}Box${row}`)
     let cell = document.querySelector(`#set${column}Box${row}`);
     cell.innerHTML = '';
 };
@@ -71,12 +105,14 @@ function populateWord(input) {
         removeLetter(input);
     } else if (input === 'ENTER'){
         if (letters.length < 5){
-            console.log('Word must be 5 letters.');
+            console.log('Word must be 5 letters.'); // change to something more user friendly like an alert 
         } else {
             for (let word in wordObj) {
                 if (wordObj[word] === null){
                     wordObj[word] = combineLetters(letters);
                     letters = []; // reset letters variable
+                    // prompt the user to set right, right but wrong place, and wrong locations in the submitted word.
+                    // do the logic function. It will do the logic to figure out what words to recommend. 
                     break;
                 };
             };
@@ -101,3 +137,4 @@ function initializeKeyboard(){
 };
 
 initializeKeyboard();
+setColors();
