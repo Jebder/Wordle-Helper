@@ -1,4 +1,4 @@
-let wordDict = {
+let wordObj = {
     firstWord: null,
     secondWord: null, 
     thirdWord: null, 
@@ -8,6 +8,53 @@ let wordDict = {
 };
 
 let letters = []; 
+
+
+function removeLetter(letter){
+    let currentWordObj = '';
+    
+    
+    //find what number word we should remove the letters of.
+    for (let word in wordObj) {
+        if (wordObj[word] === null){
+            currentWordObj = word;
+            break;
+        };
+    };
+
+    const keys = Object.keys(wordObj);
+    const row = letters.length + 1; 
+    const column = keys.indexOf(currentWordObj) + 1; // because 0 index 
+
+    console.log(row)
+    console.log(column)
+
+    console.log(`#set${column}Box${row}`)
+    let cell = document.querySelector(`#set${column}Box${row}`);
+    cell.innerHTML = '';
+};
+
+
+function displayLetter(letter) {
+    let currentWordObj = '';
+    
+    
+    //find what number word we should fill the letters of.
+    for (let word in wordObj) {
+        if (wordObj[word] === null){
+            currentWordObj = word;
+            break;
+        };
+    };
+    
+    // 
+    const keys = Object.keys(wordObj);
+    const row = letters.length; 
+    const column = keys.indexOf(currentWordObj) + 1; // because 0 index 
+
+    let cell = document.querySelector(`#set${column}Box${row}`);
+    cell.innerHTML = letter;
+};
 
 
 function combineLetters(letters) {
@@ -21,14 +68,14 @@ function combineLetters(letters) {
 function populateWord(input) {
     if (input === 'BACKSPACE'){
         letters.pop();
-        console.log(letters)
+        removeLetter(input);
     } else if (input === 'ENTER'){
         if (letters.length < 5){
             console.log('Word must be 5 letters.');
         } else {
-            for (let word in wordDict) {
-                if (wordDict[word] === null){
-                    wordDict[word] = combineLetters(letters);
+            for (let word in wordObj) {
+                if (wordObj[word] === null){
+                    wordObj[word] = combineLetters(letters);
                     letters = []; // reset letters variable
                     break;
                 };
@@ -37,7 +84,7 @@ function populateWord(input) {
     } else { 
         if (letters.length < 5) {
             letters.push(input);
-            console.log(letters);
+            displayLetter(input);
         };
     };
 };
@@ -48,7 +95,7 @@ function initializeKeyboard(){
         key.addEventListener('click', ()=>{
             let keyValue = key.innerHTML;
             populateWord(keyValue);
-            console.log(wordDict);
+            console.log(wordObj);
         })
     });
 };
