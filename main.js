@@ -9,6 +9,7 @@ let wordObj = {
 
 let letters = []; 
 
+<<<<<<< Updated upstream
 let colorArray = [];
 
 function changeColor(input) {
@@ -48,6 +49,10 @@ function enterColors(){
 };
 
 
+=======
+//Load keyboard click sound
+const clickSound = new Audio('Wordle-Solver/wow.mp3')
+>>>>>>> Stashed changes
 function removeLetter(letter){
     let currentWordObj = '';
     
@@ -67,6 +72,7 @@ function removeLetter(letter){
     let cell = document.querySelector(`#set${column}Box${row}`);
     cell.innerHTML = '';
 };
+
 
 
 function displayLetter(letter) {
@@ -91,13 +97,10 @@ function displayLetter(letter) {
 };
 
 
+
 function combineLetters(letters) {
-    let word = "";
-    for (let i = 0; i < letters.length; i++) {
-      word = word + letters[i];
-    }
-    return word;
-  };
+    return letters.join('');
+};
 
 function populateWord(input) {
     if (input === 'BACKSPACE'){
@@ -136,5 +139,27 @@ function initializeKeyboard(){
     });
 };
 
+<<<<<<< Updated upstream
 initializeKeyboard();
 setColors();
+=======
+//Play keyboard click sound on keydown event
+    document.addEventListener('keydown', (event) => {
+        let keyValue = event.key.toUpperCase();
+        if (/[A-Z]/.test(keyValue)) {
+            populateWord(keyValue);
+            console.log(wordObj);
+            clickSound.play(); //play the click sound
+        }
+    });
+
+//Play keyboard click sound on keyup event
+    document.addEventListener('keyup', () => {
+        clickSound.pause();
+        clickSound.currentTime = 0;
+    });
+
+    
+
+initializeKeyboard();
+>>>>>>> Stashed changes
