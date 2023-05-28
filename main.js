@@ -9,7 +9,6 @@ let wordObj = {
 
 let letters = []; 
 
-<<<<<<< Updated upstream
 let colorArray = [];
 
 function changeColor(input) {
@@ -49,10 +48,6 @@ function enterColors(){
 };
 
 
-=======
-//Load keyboard click sound
-const clickSound = new Audio('Wordle-Solver/wow.mp3')
->>>>>>> Stashed changes
 function removeLetter(letter){
     let currentWordObj = '';
     
@@ -139,10 +134,6 @@ function initializeKeyboard(){
     });
 };
 
-<<<<<<< Updated upstream
-initializeKeyboard();
-setColors();
-=======
 //Play keyboard click sound on keydown event
     document.addEventListener('keydown', (event) => {
         let keyValue = event.key.toUpperCase();
@@ -162,4 +153,3 @@ setColors();
     
 
 initializeKeyboard();
->>>>>>> Stashed changes
