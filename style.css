@@ -12,6 +12,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    
 }
 
 .Header {
@@ -19,6 +20,8 @@ body {
     font-size: 56px;
     border-bottom: solid black 2px;
     padding: 10px;
+    background-color: antiquewhite;
+    
 
 }
 
@@ -26,32 +29,67 @@ body {
     display: flex;
     justify-content: center;
     margin-left: -300px;
-    gap: 175px;
+    gap: 185px;
+    
   }
 
 .wordListBox{
+    display: flex;
+    justify-content:left;
+    margin-right: -100px;
+    width: 300px;
     max-height: 450px;
     overflow: auto; /* Enable scrolling */
     height: 500%;
+    background-color: antiquewhite;
+    background-blend-mode: darken;
+    background-attachment: local;
+    background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
+    background-repeat:no-repeat;
+    background-size: 100px;
+    background-position: center center;
+    background-blend-mode:multiply;
+    background-attachment: scroll;
+    
+    
+  
+  
 }
 
 
 ol{
-    padding-left: 30px;
-    padding-right: 20px;
-    margin: 0;
-    gap: 2px;
+    
+    padding-left: 100px;
+    padding-right: 200px;
+    margin: auto;
+    gap: 3px; 
+    columns: 5;
+    column-gap: 100px;
+    
+
+    
 }
 
 li{
     margin-bottom: 5px;
+    margin: auto;
     font-size: 97.5%;
+    padding-right: 70px;
+    
+    
 }
 
 .allBoxSets {
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 5px;
+    justify-content: right;
+    padding-right: 60ex;
+    place-items: center;
+    margin-right: -400px;
+    
+    
+     
   }
   
   .boxSet {
@@ -59,6 +97,9 @@ li{
     flex-direction: row;
     margin: 0;
     justify-content: space-between;
+    place-items: center;
+    
+    
   }
   
   .box {
@@ -68,6 +109,34 @@ li{
     text-align: center;
     font-size: 2em;
     margin: 0 2.5px;
+    
+  }
+
+  
+
+  .keyboardContainer{
+    background-color:antiquewhite
+    
+   
+   
+    
+  }
+
+  .rowOne {
+    margin: auto;
+    text-align: center;
+    
+    
+  }
+
+  .rowTwo {
+
+    text-align: center;
+    margin: auto;
+  }
+
+  .rowThree {
+    text-align: center;
   }
 
   .enterButton{
@@ -85,4 +154,3 @@ li{
     text-align: center;
     margin-top: 0;
   }
-  
