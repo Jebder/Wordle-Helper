@@ -35,9 +35,8 @@ body {
 
 .wordListBox{
     display: flex;
-  
     justify-content:left;
-    margin-right: 300px;
+    margin-right: -100px;
     width: 300px;
     max-height: 450px;
     overflow: auto; /* Enable scrolling */
@@ -46,11 +45,12 @@ body {
     background-blend-mode: darken;
     background-attachment: local;
     background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-size: 100px;
     background-position: center center;
     background-blend-mode:multiply;
-    background-image: opacity;
+    background-attachment: scroll;
+    
     
   
   
@@ -59,11 +59,11 @@ body {
 
 ol{
     
-    padding-left: 1px;
-    padding-right: 20px;
+    padding-left: 100px;
+    padding-right: 200px;
     margin: auto;
     gap: 3px; 
-    columns: 2;
+    columns: 5;
     column-gap: 100px;
     
 
@@ -72,7 +72,9 @@ ol{
 
 li{
     margin-bottom: 5px;
+    margin: auto;
     font-size: 97.5%;
+    padding-right: 70px;
     
     
 }
@@ -84,7 +86,8 @@ li{
     justify-content: right;
     padding-right: 60ex;
     place-items: center;
-  
+    margin-right: -400px;
+    
     
      
   }
