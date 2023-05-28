@@ -78,11 +78,11 @@ li{
 }
 
 .allBoxSets {
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 5px;
-    justify-content: center;
-    padding-right: 50p;
+    justify-content: right;
+    padding-right: 60ex;
     place-items: center;
   
     
