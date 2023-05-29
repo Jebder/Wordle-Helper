@@ -133,6 +133,7 @@ function initializeKeyboard(){
             let keyValue = key.innerHTML;
             populateWord(keyValue);
             console.log(wordObj);
+            clickSound.play();
         })
     });
 };
