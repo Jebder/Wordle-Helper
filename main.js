@@ -45,12 +45,6 @@ function setColors(){
     })
 };
 
-
-function enterColors(){
-
-};
-
-
 function removeLetter(letter){
     let currentWordObj = '';
     
@@ -126,34 +120,6 @@ function populateWord(input) {
     };
 };
 
-function initializeKeyboard(){
-    let keys = document.querySelectorAll('.key');
-    keys.forEach((key) => {
-        key.addEventListener('click', ()=>{
-            let keyValue = key.innerHTML;
-            populateWord(keyValue);
-            console.log(wordObj);
-            clickSound.play();
-        })
-    });
-};
-
-//Play keyboard click sound on keydown event
-    document.addEventListener('keydown', (event) => {
-        let keyValue = event.key.toUpperCase();
-        if (/[A-Z]/.test(keyValue)) {
-            populateWord(keyValue);
-            console.log(wordObj);
-            clickSound.play(); //play the click sound
-        }
-    });
-
-//Play keyboard click sound on keyup event
-    //document.addEventListener('keyup', () => {
-        //clickSound.pause();
-        //clickSound.currentTime = 0;
-    //});
-
-    
-
-initializeKeyboard();
+virtualKeyboard();
+keyboard();
+setColors();
