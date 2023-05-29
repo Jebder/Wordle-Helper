@@ -9,6 +9,9 @@ let wordObj = {
 
 let letters = []; 
 
+//Load keyboard click sound
+const clickSound = new Audio('wow.mp3')
+
 let colorArray = [];
 
 function changeColor(input) {
@@ -145,10 +148,10 @@ function initializeKeyboard(){
     });
 
 //Play keyboard click sound on keyup event
-    document.addEventListener('keyup', () => {
-        clickSound.pause();
-        clickSound.currentTime = 0;
-    });
+    //document.addEventListener('keyup', () => {
+        //clickSound.pause();
+        //clickSound.currentTime = 0;
+    //});
 
     
 
