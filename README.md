@@ -1,3 +1,3 @@
-# Wordle-Solve
+# Wordle-Helper
 
-A cute, helpful take on the Wordle game :)
+A cute, helper for the Wordle game :)
