@@ -1,5 +1,12 @@
-Notes will go here. Can use for communication or whatever. 
-
-Say what you did in the code that should be noted.
-
-Comment system may suffice.
+-we input a word and set the colors
+-we press ENTER
+-program gets the colors and the word and puts them into an index.
+-use color to get a list or dict of right, wrong, wrong place letters and their locations. Store in rights in dic with key:letter value:location.
+-take right letters and do elim
+    -- a function that will take right letters and eliminate all words that do not have the letter/letters in the right place
+-take wrong letters and rome all words without that letter anywhere
+-elim words that dont include wrong palce words anywhere in the word.
+    -- a function that checks if letters in word anywhere
+-spit out words
+-update dom with new words-
+-repeat
