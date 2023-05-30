@@ -9,12 +9,6 @@ let wordObj = {
 
 let letters = []; 
 
-//Load keyboard click sound
-//const clickSound = new Audio('wow.mp3')
-
-
-
-
 virtualKeyboard();
 keyboard();
 setColors();

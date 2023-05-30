@@ -15,7 +15,7 @@ function removeLetter(letter){
     const column = keys.indexOf(currentWordObj) + 1; // because 0 index 
 
     let cell = document.querySelector(`#set${column}Box${row}`);
-    cell.innerHTML = '';
+    cell.textContent = '';
 };
 
 
@@ -38,7 +38,7 @@ function displayLetter(letter) {
     const column = keys.indexOf(currentWordObj) + 1; // because 0 index 
 
     let cell = document.querySelector(`#set${column}Box${row}`);
-    cell.innerHTML = letter;
+    cell.textContent = letter;
 };
 
 

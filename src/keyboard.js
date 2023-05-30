@@ -12,7 +12,7 @@ function virtualKeyboard(){
     let keys = document.querySelectorAll('.key');
     keys.forEach((key) => {
         key.addEventListener('click', ()=>{
-            let keyValue = key.innerHTML;
+            let keyValue = key.textContent;
             populateWord(keyValue);
         })
     });
