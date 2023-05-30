@@ -83,10 +83,14 @@ li{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    justify-content: left;
-    padding-right: px;
+    
     background-image: url("https://aladinodebert.com/wp-content/uploads/2013/03/Candyland_pitch_Slide_01.jpg");
     background-repeat: no-repeat;
+    border-style: groove;
+    margin: auto;
+    margin-right: 38%;
+    
+    
     
     
 
@@ -98,9 +102,11 @@ li{
   .boxSet {
     display: flex;
     flex-direction: row;
-    margin: 0;
+    margin: auto;
     justify-content: space-between;
     place-items: center;
+    border-color: black;
+    
     
     
   }
@@ -113,7 +119,8 @@ li{
     font-size: 2em;
     margin: 0 2.5px;
     background-color: white;
-    
+    border-color: black;
+    border-style: groove;
   }
 
   
