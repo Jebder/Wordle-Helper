@@ -27,66 +27,69 @@ body {
 
 .Main {
     display: flex;
-    justify-content: center;
-    margin-left: -300px;
-    gap: 185px;
+    justify-cont
+    
     
   }
 
 .wordListBox{
     display: flex;
-    justify-content:left;
-    margin-right: -100px;
-    width: 300px;
-    max-height: 450px;
+    margin-right: 88px;
+    width: 600px;
+    max-height: 115px;
     overflow: auto; /* Enable scrolling */
-    height: 500%;
+    height: 800%;
     background-color: antiquewhite;
     background-blend-mode: darken;
     background-attachment: local;
     background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: 100px;
     background-position: center center;
-    background-blend-mode:multiply;
+    background-blend-mode: multiply;
     background-attachment: scroll;
-    
-    
-  
-  
+
 }
+    
+  
 
 
 ol{
     
-    padding-left: 100px;
-    padding-right: 200px;
+    padding-left: 10px;
     margin: auto;
-    gap: 3px; 
+    gap: 1px; 
     columns: 5;
-    column-gap: 100px;
+    column-gap: px;
+    
+    
     
 
     
 }
 
 li{
-    margin-bottom: 5px;
+    
+    display: flex;
     margin: auto;
     font-size: 97.5%;
-    padding-right: 70px;
+    padding-right: 64px;
+    
     
     
 }
 
 .allBoxSets {
-    display: block;
+    display: flex;
     flex-direction: column;
     gap: 5px;
-    justify-content: right;
-    padding-right: 60ex;
-    place-items: center;
-    margin-right: -400px;
+    justify-content: left;
+    padding-right: px;
+    background-image: url("https://aladinodebert.com/wp-content/uploads/2013/03/Candyland_pitch_Slide_01.jpg");
+    background-repeat: no-repeat;
+    
+    
+
     
     
      
