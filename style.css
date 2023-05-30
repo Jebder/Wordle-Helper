@@ -7,161 +7,143 @@
 /* Italic style */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700&display=swap');
 
-body {
+
+
+.body {
     font-family: 'Rubik', sans-serif;
-    height: 100vh;
     margin: 0;
     padding: 0;   
 }
 
 .Header {
-    text-align: center;
-    font-size: 56px;
-    border-bottom: solid black 2px;
-    padding: 10px;
-    background-color: antiquewhite;
+  text-align: center;
+  font-size: 56px;
+  border-bottom: solid black 2px;
+  padding: 10px;
+  background-color: antiquewhite;
     
-    
-
 }
 
 .Main {
-    display: flex;
-    justify-cont
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 3%;
+}
+
+@keyframes Wave{
+  0% {background-color: rgb(146, 0, 114); }
+  50% {background-color: rgb(156, 97, 73); }
+  100% {background-color: rgb(255, 200, 241); }
     
-    
-  }
+}
+  
+
+.backgroundrgb {
+  animation: Wave 2s ease-in-out infinite;
+  
+      
+}
 
 .wordListBox{
-    display: flex;
-    margin-right: 88px;
-    width: 600px;
-    max-height: 115px;
-    overflow: auto; /* Enable scrolling */
-    height: 800%;
-    background-color: antiquewhite;
-    background-blend-mode: darken;
-    background-attachment: local;
-    background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
-    background-repeat: no-repeat;
-    background-size: 100px;
-    background-position: center center;
-    background-blend-mode: multiply;
-    background-attachment: scroll;
-
+  display: flex;
+  margin-right: -36%;
+  width: 33%;
+  max-height: 115px;
+  overflow: auto; /* Enable scrolling */
+  height: auto;
+  background-color: antiquewhite;
+  background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-attachment: scroll;
 }
     
   
-
-
 ol{
     
-    padding-left: 10px;
-    margin: auto;
-    gap: 1px; 
-    columns: 5;
-    column-gap: px;
-    
-    
-    
-
+  padding-left: 10px;
+  margin: auto;
+  gap: 1px; 
+  columns: 5;
     
 }
 
 li{
-    
-    display: flex;
-    margin: auto;
-    font-size: 97.5%;
-    padding-right: 64px;
-    
-    
-    
+  display: flex;
+  margin: auto;
+  font-size: 97.5%;
+  padding-right: 66px;
 }
 
 .allBoxSets {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-image: url("https://aladinodebert.com/wp-content/uploads/2013/03/Candyland_pitch_Slide_01.jpg");
+  background-repeat: no-repeat;
+  border-style: groove;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
     
-    background-image: url("https://aladinodebert.com/wp-content/uploads/2013/03/Candyland_pitch_Slide_01.jpg");
-    background-repeat: no-repeat;
-    border-style: groove;
-    margin: auto;
-    margin-right: 38%;
-    
-    
-    
-    
+}
 
+
+.boxSet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
     
-    
-     
-  }
+}
   
-  .boxSet {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    justify-content: space-between;
-    place-items: center;
-    border-color: black;
-    
-    
-    
-  }
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 2em;
+  margin: 0 2.5px;
+  background-color: white;
+  border-color: black;
+  border-style: groove;
+}
+
+.keyboardContainer {
+  background-color:antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
-  .box {
-    width: 60px;
-    height: 60px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 2em;
-    margin: 0 2.5px;
-    background-color: white;
-    border-color: black;
-    border-style: groove;
-  }
+    
+}
 
+ .rowOne,
+ .rowTwo,
+ .rowThree {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+ }
+
+.enterButton{
+  margin-top: 5px;
+  font-size: 20px;
   
+}
 
-  .keyboardContainer{
-    background-color:antiquewhite
-    
-   
-   
-    
-  }
-
-  .rowOne {
-    margin: auto;
-    text-align: center;
-    
-    
-  }
-
-  .rowTwo {
-
-    text-align: center;
-    margin: auto;
-  }
-
-  .rowThree {
-    text-align: center;
-  }
-
-  .enterButton{
-    margin-top: 5px;
-    font-size: 20px;
-    border-color: black;
-  }
-
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: lightgray;
-    text-align: center;
-    margin-top: 0;
-  }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: lightgray;
+  text-align: center;
+  margin-top: 0;
+}
