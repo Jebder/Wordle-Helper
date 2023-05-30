@@ -1,9 +1,11 @@
 function keyboard(){
     document.addEventListener('keydown', (event) => {
         let keyValue = event.key.toUpperCase();
-        if (/[A-Z]/.test(keyValue)) {
+        console.log(keyValue.length)
+        if (/[A-Z]/.test(keyValue) && (keyValue.length === 1 || keyValue === 'ENTER' || keyValue === 'BACKSPACE')) {
+            console.log('populate')
             populateWord(keyValue);
-            console.log(wordObj);
+
         }
     });
 };
@@ -16,6 +18,11 @@ function virtualKeyboard(){
             populateWord(keyValue);
         })
     });
+};
+
+function keyboards() {
+    keyboard();
+    virtualKeyboard();
 };
 
 // -------------------------------------------------------------------------------------

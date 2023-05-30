@@ -9,6 +9,5 @@ let wordObj = {
 
 let letters = []; 
 
-virtualKeyboard();
-keyboard();
+keyboards();
 setColors();
