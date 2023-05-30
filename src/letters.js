@@ -61,6 +61,9 @@ function populateWord(input) {
                     letters = []; // reset letters variable
                     // prompt the user to set right, right but wrong place, and wrong locations in the submitted word.
                     // do the logic function. It will do the logic to figure out what words to recommend. 
+                    stampColors();
+                    colorArray = [];//reset color array
+                    console.log('stamp')//test
                     break;
                 };
             };
