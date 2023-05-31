@@ -1,24 +1,22 @@
 let prunedWordList = [];
 function logic(){
-  for (let letter of letters) {
-  let position = letters.indexOf(letter);
+  for (let i = 0; i < letters.length; i++) {
     console.log(translatedColorArray)
-    console.log(position);
-    console.log(letter)
+    console.log(i);
     console.log(letters)
-    let rwp = translatedColorArray[position];
+    let rwp = translatedColorArray[i];
     console.log(rwp);
     switch (rwp){
       case 'r':
-          rightLetterElim(letter,position);
+          rightLetterElim(letters[i],i);
           console.log('rightElim');
           break;
       case 'w': 
-          wrongLetterElim(letter);
+          wrongLetterElim(letters[i]);
           console.log('wrongElim');
           break;
       case 'wp':
-          wrongPlaceElim(letter,position);
+          wrongPlaceElim(letters[i],i);
           console.log('WPElim');
           break;
           
@@ -28,6 +26,7 @@ function logic(){
   // function to update dom with new pruned word list
   console.log('update dom');
   console.log(prunedWordList);
+  translatedColorArray = []; //reset TCA
   
 };
 
@@ -41,11 +40,9 @@ function rightLetterElim(refLetter,pos){
     currentWordList = prunedWordList;
   };
   // prune list
-  for (let word in currentWordList) {
-    if (word[pos] === refLetter) {
+  for (let word of currentWordList) {
+    if (word[pos] === refLetter.toLowerCase()) {
       prunedWordList.push(word);
-      console.log(prunedWordList)
-      console.log('prunedWord');
     };
   };
 };
@@ -60,11 +57,10 @@ function wrongLetterElim(refLetter){
   };
 
   //prune list
-  for (let word in currentWordList) {
+  for (let word of currentWordList) {
     for (let letter in word){
       if (letter === refLetter ) {
         prunedWordList.push(word);
-        console.log('prunedWord');
         break;
       }
     }

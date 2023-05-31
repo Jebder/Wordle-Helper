@@ -2,7 +2,7 @@ let translatedColorArray = []; // w's = wrong, r's = right, wp's = wrong place.
                                // need to be sure to get it to reset after.
 
 function translateColor(colors){
-    for (let color in colors) {
+    for (let color of colors) {
         switch (color) {
             case 'rgb(255, 255, 255)': // white color in RGB format
               translatedColorArray.push('w');
@@ -20,8 +20,8 @@ function translateColor(colors){
 function getColors(obj){
   let colorArray = [];
   const keys = Object.keys(wordObj);
-  const column = keys.indexOf(obj);
-  console.log(column)
+  const column = keys.indexOf(obj) + 1;
+  console.log(column + 1)
   console.log(keys)
 
   const parentEle = document.querySelector(`#boxSet${column}`);
@@ -31,6 +31,7 @@ function getColors(obj){
       let computedStyle = window.getComputedStyle(element);
       let color = computedStyle.backgroundColor;
       colorArray.push(color);
+      console.log(colorArray)
   };
 
   translateColor(colorArray);

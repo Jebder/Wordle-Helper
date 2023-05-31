@@ -25,5 +25,4 @@ for letter in word {
             do w elim
         case: WP
             do WP elim
-    } return wordlist to put in dom
-}
+    } 

@@ -58,9 +58,9 @@ function populateWord(input) {
             for (let word in wordObj) {
                 // ORDER MATTERS HERE
                 if (wordObj[word] === null){
-                    wordObj[word] = combineLetters(letters);
                     stampColors();
                     logic(); 
+                    wordObj[word] = combineLetters(letters);
                     letters = []; // reset letters variable
                     colorArray = [];//reset color array
                     break;
