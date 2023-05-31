@@ -56,14 +56,13 @@ function populateWord(input) {
             alert('Word must be 5 letters.'); // change to something more user friendly like an alert 
         } else {
             for (let word in wordObj) {
+                // ORDER MATTERS HERE
                 if (wordObj[word] === null){
                     wordObj[word] = combineLetters(letters);
-                    letters = []; // reset letters variable
-                    // prompt the user to set right, right but wrong place, and wrong locations in the submitted word.
-                    // do the logic function. It will do the logic to figure out what words to recommend. 
                     stampColors();
+                    logic(); 
+                    letters = []; // reset letters variable
                     colorArray = [];//reset color array
-                    console.log('stamp')//test
                     break;
                 };
             };
