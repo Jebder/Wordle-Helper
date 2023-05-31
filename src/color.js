@@ -1,19 +1,39 @@
-let colorArray = [];
+let translatedColorArray = []; // w's = wrong, r's = right, wp's = wrong place. 
+                               // need to be sure to get it to reset after.
+
+function translateColor(colors){
+    for (let color in colors) {
+        switch (color) {
+            case 'rgb(255, 255, 255)': // white color in RGB format
+              translatedColorArray.push('w');
+              break;
+            case 'rgb(255, 255, 0)': // yellow color in RGB format
+            translatedColorArray.push('wp');
+              break;
+            case 'rgb(0, 128, 0)': // green color in RGB format
+            translatedColorArray.push('r');
+              break;
+          }
+    }
+};
 
 function getColors(obj){
+  let colorArray = [];
   const keys = Object.keys(wordObj);
   const column = keys.indexOf(obj);
+  console.log(column)
+  console.log(keys)
 
   const parentEle = document.querySelector(`#boxSet${column}`);
   const elements = parentEle.querySelectorAll('*');
-  console.log(elements)
 
   for (let element of elements) {
       let computedStyle = window.getComputedStyle(element);
       let color = computedStyle.backgroundColor;
       colorArray.push(color);
   };
-  console.log(colorArray)
+
+  translateColor(colorArray);
 };
 
 function stampColors() {
@@ -26,7 +46,7 @@ function stampColors() {
       };
   };
   getColors(currentWordObj);
-
+  console.log(currentWordObj);
 };
 
 function changeColor(input) {

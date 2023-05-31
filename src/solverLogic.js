@@ -1,42 +1,76 @@
-// a function to determine if the letters are right, wrong, or in wrong place.
-const translatedColorArray = []; // w's = wrong, r's = right, wp's = wrong place. 
-const w = [];
-const r = [];
-const wp = [];
-
-function translateColor(colors){
-    for (let color in colors) {
-        switch (color) {
-            case 'rgb(255, 255, 255)': // white color in RGB format
-              translatedColorArray.push('w');
-              break;
-            case 'rgb(255, 255, 0)': // yellow color in RGB format
-            translatedColorArray.push('wp');
-              break;
-            case 'rgb(0, 128, 0)': // green color in RGB format
-            translatedColorArray.push('r');
-              break;
-          }
+let prunedWordList = [];
+function logic(){
+  for (let letter of letters) {
+  let position = letters.indexOf(letter);
+    console.log(translatedColorArray)
+    console.log(position);
+    console.log(letter)
+    console.log(letters)
+    let rwp = translatedColorArray[position];
+    console.log(rwp);
+    switch (rwp){
+      case 'r':
+          rightLetterElim(letter,position);
+          console.log('rightElim');
+          break;
+      case 'w': 
+          wrongLetterElim(letter);
+          console.log('wrongElim');
+          break;
+      case 'wp':
+          wrongPlaceElim(letter,position);
+          console.log('WPElim');
+          break;
+          
     }
+  };
+
+  // function to update dom with new pruned word list
+  console.log('update dom');
+  console.log(prunedWordList);
+  
 };
 
-
-function getLettersForSearch(){
-    for (let letter in translatedColorArray) {
-        switch (letter) {
-            case 'r': 
-                // store letter and letter location. Must be in location. 
-              break;
-            case 'w': 
-                // remove words with letter from word list.  
-              break;
-            case 'wp': 
-                // store letter and letter location. Cannot be in location. 
-              break;
-          }
+// first?
+function rightLetterElim(refLetter,pos){
+  let currentWordList = '';
+  // set word list to the already pruned list if it exists. Should be faster?
+  if (prunedWordList.length === 0){
+    currentWordList = allWords;
+  } else {
+    currentWordList = prunedWordList;
+  };
+  // prune list
+  for (let word in currentWordList) {
+    if (word[pos] === refLetter) {
+      prunedWordList.push(word);
+      console.log(prunedWordList)
+      console.log('prunedWord');
     };
+  };
+};
+//second?
+function wrongLetterElim(refLetter){
+  let currentWordList = '';
+  // set word list to the already pruned list if it exists. Should be faster?
+  if (prunedWordList.length === 0){
+    currentWordList = allWords;
+  } else {
+    currentWordList = prunedWordList;
+  };
+
+  //prune list
+  for (let word in currentWordList) {
+    for (let letter in word){
+      if (letter === refLetter ) {
+        prunedWordList.push(word);
+        console.log('prunedWord');
+        break;
+      }
+    }
+  };
 };
 
-function rightLetterElim(){
-
+function wrongPlaceElim(refLetter, pos){
+  console.log('it worked')
 };

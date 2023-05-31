@@ -10,3 +10,20 @@
 -spit out words
 -update dom with new words-
 -repeat
+
+
+TCA = [r, w, w, wp, w]
+word = [Z,E,B,R,A]
+
+for letter in word {
+    position = get letter position;
+    letter = TCA(position);
+    switch (letter){
+        case: R
+            do r elim
+        case: W
+            do w elim
+        case: WP
+            do WP elim
+    } return wordlist to put in dom
+}
