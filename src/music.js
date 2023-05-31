@@ -1,5 +1,6 @@
 var audio = document.getElementById("myAudio");
 var btn = document.getElementById("myBtn");
+var playButton = document.getElementById("playButton");
 
 function myFunction() {
     audio.muted = !audio.muted;
@@ -15,3 +16,8 @@ function pauseAudio() {
   var audio = document.getElementById("myAudio");
   audio.pause();
 }
+
+document.addEventListener('mousemove', function() {
+
+  playButton.click();
+})
