@@ -11,27 +11,24 @@
     <script src="src/letters.js"></script>
     <script src="src/solverLogic.js"></script>
     <script src="src/words.js"></script>
+    <script src="src/music.js" defer></script>
     <title>Wordle-Helper</title>
+    
     
 </head>
 
 
 <body>
-
-    <div class="backgroundrgb"></div>
     <h1 class="Header">Wordle Helper</h1>
-    
-    <audio src="wordleSOLV.mp3" loop autoplay></audio>
 
-      
-    <div class="backgroundrgb"></div> 
+    <audio id="myAudio" src="wordleSOLV.mp3" loop autoplay></audio>
     
+    <button id="myBtn" onclick="myFunction()">Mute</button>
+    
+   
     <div class="Main"> 
         
-        
-        
-        
-           <div class="wordListBox">
+        <div class="wordListBox">
             <ol>
                 
                 <li class="word">Audio</li>
@@ -182,7 +179,10 @@
         </div>
     </div>
 
-    <footer>by Jebderbonedhiself(and Gitgotsmalldick). Github.com/jebder</footer>
+    <footer>by Jebderbonedhiself(and Gitgotsmalldick). Github.com/jebder
+
+    
+    </footer>
 </body>
 </html>
 

@@ -31,19 +31,7 @@
   margin-left: 3%;
 }
 
-@keyframes Wave{
-  0% {background-color: rgb(146, 0, 114); }
-  50% {background-color: rgb(156, 97, 73); }
-  100% {background-color: rgb(255, 200, 241); }
-    
-}
-  
 
-.backgroundrgb {
-  animation: Wave 2s ease-in-out infinite;
-  
-      
-}
 
 .wordListBox{
   display: flex;
@@ -128,6 +116,7 @@ li{
  .rowTwo,
  .rowThree {
   text-align: center;
+  gap: 5px;
   display: flex;
   justify-content: center;
  }
