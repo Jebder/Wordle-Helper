@@ -70,3 +70,5 @@ function wrongLetterElim(refLetter){
 function wrongPlaceElim(refLetter, pos){
   console.log('it worked')
 };
+
+//
