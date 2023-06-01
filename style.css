@@ -36,10 +36,10 @@
 .wordListBox{
   display: flex;
   margin-right: -36%;
+  margin-top: 4%;
   width: 33%;
-  max-height: 115px;
   overflow: auto; /* Enable scrolling */
-  height: auto;
+  height: 180px;
   background-color: antiquewhite;
   background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
   background-repeat: no-repeat;
@@ -140,5 +140,7 @@ footer {
 
 .icon {
   text-decoration: line-through;
+  width: 80px;
+  background-color: wheat;
 
 }
