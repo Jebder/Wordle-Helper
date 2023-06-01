@@ -2,6 +2,8 @@ var audio = document.getElementById("myAudio");
 var muteIcon = document.getElementById('muteIcon');
 var iconMute = document.getElementById('iconMute');
 
+audio.volume = 0.1;
+
 
 function togglePlay() {
   if (audio.paused) {

@@ -151,8 +151,11 @@ footer {
   width: 80px;
   background-color: wheat;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 12%;
   border-radius: 45%;
+  position: fixed;
+  
+  
 
 }
 
@@ -160,6 +163,17 @@ footer {
 
   background-color: yellow;
   border-radius: 30%;
-  text-decoration: line-through;
+  text-decoration: line-thrh;
+  
   
 }
+
+button {
+
+  font-size: ;
+  width: auto;
+  font-size: 20px;
+  height: auto;
+  margin:auto;
+}
+
