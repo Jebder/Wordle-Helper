@@ -8,14 +8,11 @@ function togglePlay() {
     audio.play();
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'inline';
-  } else {
-    audio.pause();
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
+ 
   }  
     
   }
-}
+
 
 function toggleMute() {
   if (audio.muted) {
