@@ -12,4 +12,3 @@ let letters = [];
 keyboards();
 setColors();
 
-//
