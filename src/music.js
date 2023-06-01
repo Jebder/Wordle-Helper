@@ -1,6 +1,6 @@
 var audio = document.getElementById("myAudio");
 var muteIcon = document.getElementById('muteIcon');
-var iconMute = document.getElementById('iconMute')
+var iconMute = document.getElementById('iconMute');
 
 
 function togglePlay() {
@@ -8,21 +8,18 @@ function togglePlay() {
     audio.play();
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'inline';
- 
-  }  
-    
-  }
-
-
-function toggleMute() {
-  if (audio.muted) {
-    audio.muted = false;
-    muteIcon.classList.remove('icon');
   } else {
-    audio.muted = true;
-    muteIcon.classList.add('iconMute');
+    audio.pause();
+    pauseIcon.style.display = 'none';
+    playIcon.style.display = 'inline';
+
   }
-}
+      
+  } 
 
-muteIcon.addEventListener('click', toggleMute);
 
+
+
+
+
+muteIcon.addEventListener('click', togglePlay);
