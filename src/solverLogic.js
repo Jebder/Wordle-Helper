@@ -1,6 +1,6 @@
-let prunedWordList = [];
+let newWordList = [];
 function logic(){
-  for (let i = 0; i < letters.length; i++) {
+  for (let i = 0; i < 2; i++) {
     console.log(translatedColorArray)
     console.log(i);
     console.log(letters)
@@ -25,45 +25,62 @@ function logic(){
 
   // function to update dom with new pruned word list
   console.log('update dom');
-  console.log(prunedWordList);
+  console.log(newWordList);
   translatedColorArray = []; //reset TCA
   
 };
 
 // first?
 function rightLetterElim(refLetter,pos){
-  let currentWordList = '';
   // set word list to the already pruned list if it exists. Should be faster?
-  if (prunedWordList.length === 0){
-    currentWordList = allWords;
-  } else {
-    currentWordList = prunedWordList;
-  };
-  // prune list
-  for (let word of currentWordList) {
-    if (word[pos] === refLetter.toLowerCase()) {
-      prunedWordList.push(word);
+  if (newWordList.length !== 0){
+    for (let word of newWordList) {
+      if (word[pos] === refLetter.toLowerCase()) {
+        newWordList.push(word);
+      };
+    };
+  }else{
+    for (let word of allWords) {
+      if (word[pos] === refLetter.toLowerCase()) {
+        newWordList.push(word);
+      };
     };
   };
+  // prune list
 };
 //second?
 function wrongLetterElim(refLetter){
-  let currentWordList = '';
   // set word list to the already pruned list if it exists. Should be faster?
-  if (prunedWordList.length === 0){
-    currentWordList = allWords;
-  } else {
-    currentWordList = prunedWordList;
-  };
-
-  //prune list
-  for (let word of currentWordList) {
-    for (let letter in word){
-      if (letter === refLetter ) {
-        prunedWordList.push(word);
-        break;
+  if (newWordList.length !== 0){
+    for (let word of newWordList) {
+      let containsRefLetter = false;
+      
+      for (let letter of word) {
+        if (letter === refLetter) {
+          containsRefLetter = true;
+          break;
+        }
+      }
+      
+      if (!containsRefLetter) {
+        newWordList.push(word);
       }
     }
+  } else {
+    for (let word of allWords) {
+      let containsRefLetter = false;
+      
+      for (let letter of word) {
+        if (letter === refLetter) {
+          containsRefLetter = true;
+          break;
+        };
+      };
+      
+      if (!containsRefLetter) {
+        newWordList.push(word);
+      };
+    };
   };
 };
 
@@ -71,4 +88,3 @@ function wrongPlaceElim(refLetter, pos){
   console.log('it worked')
 };
 
-//
