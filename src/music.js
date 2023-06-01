@@ -1,23 +1,17 @@
 var audio = document.getElementById("myAudio");
-var btn = document.getElementById("myBtn");
-var playButton = document.getElementById("playButton");
+var muteIcon = document.getElementById('muteIcon');
 
-function myFunction() {
-    audio.muted = !audio.muted;
-    btn.innerHTML = audio.muted ? "Unmute":'Mute'
+
+
+function toggleMute() {
+  if (audio.muted) {
+    audio.muted = false;
+    muteIcon.classList.remove('icon');
+  } else {
+    audio.muted = true;
+    muteIcon.classList.add('icon');
+  }
 }
 
-function playAudio() {
-  var audio = document.getElementById("myAudio");
-  audio.play();
-}
+muteIcon.addEventListener('click', toggleMute);
 
-function pauseAudio() {
-  var audio = document.getElementById("myAudio");
-  audio.pause();
-}
-
-document.addEventListener('mousemove', function() {
-
-  playButton.click();
-})
