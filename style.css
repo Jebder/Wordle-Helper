@@ -53,7 +53,6 @@
     
   
 ol{
-    
   padding-left: 10px;
   margin: auto;
   gap: 1px; 
@@ -80,11 +79,7 @@ li{
   padding: 12px;
   align-items: center;
   justify-content: center;
-  margin: auto;
- margin-right:
-  
-  
-    
+  margin: auto;   
 }
 
 
@@ -104,7 +99,7 @@ li{
   text-align: center;
   font-size: 2em;
   margin: 0 2.5px;
-  background-color:rgba(238, 229, 218, 0.651);
+  background-color:rgba(255, 255, 255); /* Leave color as 255,255,255 for now. Breaks color code if changed. Opacity is problem */
   border-color: black;
   border-style: groove;
 }
@@ -160,7 +155,6 @@ footer {
 }
 
 .iconMute {
-
   background-color: yellow;
   border-radius: 30%;
   text-decoration: line-thrh;
@@ -169,8 +163,6 @@ footer {
 }
 
 button {
-
-  font-size: ;
   width: auto;
   font-size: 20px;
   height: auto;
