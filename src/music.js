@@ -1,7 +1,7 @@
 var audio = document.getElementById("myAudio");
-var muteIcon = document.getElementById('muteIcon');
+var pauseIcon = document.getElementById('pauseIcon');
 var iconMute = document.getElementById('iconMute');
-
+var playIcon = document.getElementById('playIcon')
 audio.volume = 0.1;
 
 
