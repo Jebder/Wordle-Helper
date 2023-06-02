@@ -19,9 +19,9 @@
 .Header {
   text-align: center;
   font-size: 56px;
-  border-bottom: solid black 2px;
   padding: 10px;
-  background-color: antiquewhite;
+  margin-bottom: 3.5%;
+  
     
 }
 
@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: flex-start;
   margin-top: -2%;
-  background-color: rgba(165, 182, 182, 0.568);
+  
 }
 
 
@@ -40,9 +40,9 @@
   margin-right: -33%;
   margin-top: 4%;
   width: 33%;
-  overflow: auto; /* Enable scrolling */
+  overflow:hidden; /* Enable scrolling */
   height: 180px;
-  background-color: antiquewhite;
+  background-color:hsla(240, 4%, 71%, 0.274);
   background-image: url("https://media.lekia.se/lekia/images/g-matt-21104880-fpm65-2020-03-16-083253027/0/0/0/fisher-price-laugh-learn-first-words-puppy.jpg");
   background-repeat: no-repeat;
   background-size: 20%;
@@ -50,9 +50,32 @@
   background-position: center center;
   background-attachment: scroll;
 }
+
+.wordListBox:hover {
+  overflow: auto;
+  opacity: 1;
+}
+
+.wordListBox::-webkit-scrollbar {
+  width: 9px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.wordListBox:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.wordListBox::-webkit-scrollbar-thumb{
+  background-color: rgba(0,0,0,0.5);
+
+.wordListBox::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.8);
+}
     
   
 ol{
+    
   padding-left: 10px;
   margin: auto;
   gap: 1px; 
@@ -79,7 +102,11 @@ li{
   padding: 12px;
   align-items: center;
   justify-content: center;
-  margin: auto;   
+  margin: auto;
+ 
+  
+  
+    
 }
 
 
@@ -99,13 +126,12 @@ li{
   text-align: center;
   font-size: 2em;
   margin: 0 2.5px;
-  background-color:rgba(255, 255, 255); /* Leave color as 255,255,255 for now. Breaks color code if changed. Opacity is problem */
+  background-color:rgba(238, 229, 218, 0.651);
   border-color: black;
   border-style: groove;
 }
 
 .keyboardContainer {
-  background-color:antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +150,7 @@ li{
   justify-content: center;
  }
 
-.enterButton{
+.enterButton {
   margin-top: 5px;
   font-size: 20px;
   
@@ -154,15 +180,17 @@ footer {
 
 }
 
-.iconMute {
-  background-color: yellow;
-  border-radius: 30%;
-  text-decoration: line-thrh;
-  
-  
+#muteIcon {
+  position: fixed;
 }
 
+
+  
+
+
 button {
+
+  
   width: auto;
   font-size: 20px;
   height: auto;
