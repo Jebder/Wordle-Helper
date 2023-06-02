@@ -54,6 +54,9 @@ function rightLetterElim(refLetter, pos) {
     newWordList = tempWordList; // Update newWordList with the new filtered list
     console.log('right letter. 2');
   };
+  if (newWordList.length === 0){
+    console.log('no words meet criteria')
+  };
 };
 //second?
 function wrongLetterElim(refLetter) {
@@ -64,7 +67,7 @@ function wrongLetterElim(refLetter) {
       let containsRefLetter = false;
 
       for (let letter of word) {
-        if (letter === refLetter) {
+        if (letter === refLetter.toLowerCase()) {
           containsRefLetter = true;
           break;
         };
@@ -81,18 +84,21 @@ function wrongLetterElim(refLetter) {
       let containsRefLetter = false;
 
       for (let letter of word) {
-        if (letter === refLetter) {
+        if (letter === refLetter.toLowerCase()) {
           containsRefLetter = true;
           break;
         };
       };
 
-      if (containsRefLetter) {
+      if (!containsRefLetter) {
         tempWordList.push(word);
       };
     };
     newWordList = tempWordList; // Update newWordList with the new filtered list
     console.log('wrong letter. 2');
+  };
+  if (newWordList.length === 0){
+    console.log('no words meet criteria')
   };
 };
 
@@ -103,9 +109,9 @@ function wrongPlaceElim(refLetter, pos) {
     for (let word of newWordList) {
       let containsRefLetter = false;
 
-      if (word[pos] !== refLetter) {
+      if (word[pos] !== refLetter.toLowerCase()) {
         for (let letter of word) {
-          if (letter === refLetter) {
+          if (letter === refLetter.toLowerCase()) {
             containsRefLetter = true;
             break;
           };
@@ -122,9 +128,9 @@ function wrongPlaceElim(refLetter, pos) {
     for (let word of allWords) {
       let containsRefLetter = false;
 
-      if (word[pos] !== refLetter) {
+      if (word[pos] !== refLetter.toLowerCase()) {
         for (let letter of word) {
-          if (letter === refLetter) {
+          if (letter === refLetter.toLowerCase()) {
             containsRefLetter = true;
             break;
           };
