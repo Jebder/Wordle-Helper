@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,10 @@
     <script src="src/music.js" defer></script>
     <title>Wordle-Helper</title>
     
-    
+    <button id="music-switch" onclick="toggleMute()">
+        <span id="music-note">&#9835;</span>
+        <span id="mute-symbol">&#47;</span>
+    </button> 
 </head>
 
 
@@ -718,10 +722,7 @@
     
     <audio id="myAudio" src="Sound files/In 3 - Godmode.mp3" loop></audio>
    
-    <button id="music-switch" onclick="toggleMute()">
-        <span id="music-note">&#9835;</span>
-        <span id="mute-symbol">&#47;</span>
-    </button>
+    
 
 
 
