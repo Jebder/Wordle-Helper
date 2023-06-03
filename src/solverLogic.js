@@ -28,6 +28,7 @@ function logic(){
 
   // function to update dom with new pruned word list
   console.log('update dom');
+  displayNewWordList(newWordList);
   console.log(newWordList);
   translatedColorArray = []; //reset TCA
   
@@ -146,3 +147,16 @@ function wrongPlaceElim(refLetter, pos) {
 };
 
 
+function displayNewWordList(list){
+  // Remove old list elements
+  let olElement = document.querySelector('ol');
+  while (olElement.firstChild) {
+    olElement.firstChild.remove();
+  } ;
+  // Make new elements 
+  for (word of newWordList) {
+    let newElement = document.createElement('li');
+    newElement.textContent = word;
+    olElement.appendChild(newElement);
+  };
+};
