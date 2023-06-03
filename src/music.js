@@ -1,27 +1,24 @@
+var isMuted = false;
 var audio = document.getElementById("myAudio");
-var pauseIcon = document.getElementById('pauseIcon');
-var iconMute = document.getElementById('iconMute');
-var playIcon = document.getElementById('playIcon')
-audio.volume = 0.1;
+var musicNote = document.getElementById("music-note");
+var muteSymbol = document.getElementById("mute-symbol");
 
-
-function togglePlay() {
-  if (audio.paused) {
+audio.addEventListener("canplaythrough", function() {
+  if (!isMuted) {
     audio.play();
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'inline';
+  }
+})
+
+function toggleMute() {
+  if (isMuted) {
+    audio.play();
+    musicNote.style.display = "inline";
+    muteSymbol.style.display = "none";
   } else {
     audio.pause();
-    pauseIcon.style.display = 'none';
-    playIcon.style.display = 'inline';
-
+    musicNote.style.display = "none";
+    muteSymbol.style.display = "inline";
   }
-      
-  } 
 
-
-
-
-
-
-muteIcon.addEventListener('click', togglePlay);
+  isMuted = !isMuted;
+}
