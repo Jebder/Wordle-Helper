@@ -52,6 +52,7 @@ function getRandomColor(){
 
 function twinkleButton() {
     const twinkleButton = document.querySelector('.twinkleButton');
+    const header = document.querySelector('h1');
     twinkleColor(twinkleButton);
     twinkleButton.addEventListener('click', twinkle);
 }

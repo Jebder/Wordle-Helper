@@ -26,10 +26,7 @@
   margin-bottom: 5.5%;
   border-color: solid black 2px;
   border-bottom: 10px;
-  border-width: 50px;
-
-
-    
+  border-width: 50px;  
 }
 
 .Main {
@@ -194,9 +191,9 @@ footer {
   
 
 
-button {
+.key {
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 7.5px;
 }
 
 #music-switch {
@@ -226,4 +223,9 @@ button {
 .headerButtons {
   display: flex;
   justify-content: space-between;
+}
+
+.twinkleButton {
+  font-size: 18px;
+  border-radius: 20px;
 }
