@@ -49,3 +49,9 @@ function getRandomColor(){
     var rgbValue = 'rgb(' + r + ', ' + g + ', ' + b + ')'; // Construct the RGB value
     return rgbValue;
 };
+
+function twinkleButton() {
+    const twinkleButton = document.querySelector('.twinkleButton');
+    twinkleColor(twinkleButton);
+    twinkleButton.addEventListener('click', twinkle);
+}
