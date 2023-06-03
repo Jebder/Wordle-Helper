@@ -9,6 +9,8 @@ audio.addEventListener("canplaythrough", function() {
   }
 })
 
+audio.volume = 0.2.5;
+
 function toggleMute() {
   if (isMuted) {
     audio.play();
