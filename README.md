@@ -11,5 +11,3 @@ HOW TO USE:
 3.) After both are input, press enter.
 
 4.) All possible words will be displayed in the box.
-
-5.) Repeat step 1. 
