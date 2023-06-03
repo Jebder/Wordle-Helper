@@ -22,17 +22,4 @@ function keyboards() {
     virtualKeyboard();
 };
 
-// -------------------------------------------------------------------------------------
-//Add these for the click sound when ready.
-
-//Load keyboard click sound
-//const clickSound = new Audio('wow.mp3')
-
-//clickSound.play(); //play the click sound
-
-//Play keyboard click sound on keyup event
-    //document.addEventListener('keyup', () => {
-        //clickSound.pause();
-        //clickSound.currentTime = 0;
-    //});
     
