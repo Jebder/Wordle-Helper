@@ -75,3 +75,16 @@ function populateWord(input) {
     };
 };
 
+function displayNewWordList(){
+    // Remove old list elements
+    let olElement = document.querySelector('ol');
+    while (olElement.firstChild) {
+      olElement.firstChild.remove();
+    } ;
+    // Make new elements 
+    for (word of newWordList) {
+      let newElement = document.createElement('li');
+      newElement.textContent = word;
+      olElement.appendChild(newElement);
+    };
+  };

@@ -11,16 +11,28 @@ function logic(){
           rightLetterElim(letters[i],i);
           console.log('rightElim');
           console.log(newWordList);
+          if (newWordList.length === 0) {
+            alert('Error: No matches exist. Check inputs.');
+            return; // Exit the function if newWordList is empty
+          };
           break;
       case 'w': 
           wrongLetterElim(letters[i]);
           console.log('wrongElim');
           console.log(newWordList);
+          if (newWordList.length === 0) {
+            alert('Error: No matches exist. Check inputs.');
+            return; // Exit the function if newWordList is empty
+          }
           break;
       case 'wp':
           wrongPlaceElim(letters[i],i);
           console.log('WPElim');
           console.log(newWordList);
+          if (newWordList.length === 0) {
+            alert('Error: No matches exist. Check inputs.');
+            return; // Exit the function if newWordList is empty
+          }
           break;
           
     };
@@ -145,20 +157,3 @@ function wrongPlaceElim(refLetter, pos) {
     console.log('WP. 2');
   };
 };
-
-
-function displayNewWordList(list){
-  // Remove old list elements
-  let olElement = document.querySelector('ol');
-  while (olElement.firstChild) {
-    olElement.firstChild.remove();
-  } ;
-  // Make new elements 
-  for (word of newWordList) {
-    let newElement = document.createElement('li');
-    newElement.textContent = word;
-    olElement.appendChild(newElement);
-  };
-};
-
-//
