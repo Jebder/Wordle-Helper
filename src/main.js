@@ -11,4 +11,4 @@ let letters = [];
 
 keyboards();
 setColors();
-
+twinkle();

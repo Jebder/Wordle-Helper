@@ -64,8 +64,8 @@ function changeColor(input) {
       case 'rgb(0, 128, 0)': // green color in RGB format
         input.style.backgroundColor = 'white';
         break;
-    }
-  }
+    };
+  };
 
 
 function setColors(){
