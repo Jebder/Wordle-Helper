@@ -9,7 +9,7 @@ audio.addEventListener("canplaythrough", function() {
   }
 })
 
-audio.volume = 0.2.5;
+audio.volume = 0.3;
 
 function toggleMute() {
   if (isMuted) {
@@ -22,5 +22,5 @@ function toggleMute() {
     muteSymbol.style.display = "inline";
   }
 
-  isMuted = !isMuted;
+  isMuted() = !isMuted;
 }
